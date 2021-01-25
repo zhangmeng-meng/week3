@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form action="{:url('Index/add')}" enctype="multipart/form-data" method="post">
+    商品名称：<input type="text" name="name"><br>
+    商品图片：<input type="file" name="img"><br>
+    商品分类：<select name="category">
+    <option value="自营女包">自营女包</option>
+    <option value="女性手机">女性手机</option>
+    <option value="三星">三星</option>
+    <option value="oppo">oppo</option>
+    <option value="小米">小米</option>
+</select>
+    <br>
+    实际销量：<input type="text"  name="sale"><br>
+    商品排序：<input type="text" name="number"><br>
+    商品状态：<input type="radio" name="is_show" value="1">上架
+    <input type="radio" name="is_show" value="0">未上架
+    <br>
+    <input type="submit" value="添加">
+</form>
+</body>
+</html>

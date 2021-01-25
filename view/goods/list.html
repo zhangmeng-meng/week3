@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form>
+    搜索：<input type="text" name="name">
+    <input type="submit">
+</form>
+<table>
+    <tr>
+        <td>商品id</td>
+        <td>商品图片</td>
+        <td>商品名称</td>
+        <td>商品分类</td>
+        <td>实际销量</td>
+        <td>商品排序</td>
+        <td>商品状态</td>
+        <td>添加时间</td>
+        <td>操作</td>
+    </tr>
+    {foreach $data as $v}
+    <tr>
+        <td>{$v.id}</td>
+        <td><img src="{$v.img}"></td>
+        <td>{$v.name}</td>
+        <td>{$v.category}</td>
+        <td>{$v.sale}</td>
+        <td>{$v.number}</td>
+        <td>{$v.is_show}</td>
+        <td>{$v.create_time}</td>
+        <td><a href="{:url('Index/del')}?id={$v.id}">删除</a></td>
+    </tr>
+    {/foreach}
+</table>
+{$data->render()}
+</body>
+</html>
